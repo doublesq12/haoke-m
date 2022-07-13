@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>黑马头条</h1>
+    <div class="login"></div>
   </div>
 </template>
 
@@ -10,6 +10,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.login{
+  width: 345px;
+  height: 50px;
+  background-color: #1cb676;
+  border-radius: 2px;
+}
 
 </style>
