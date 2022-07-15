@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="login"></div>
+    <!-- <div class="login"></div> -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,11 +12,11 @@ export default {
 </script>
 
 <style scoped>
-.login{
+/* .login{
   width: 345px;
   height: 50px;
   background-color: #1cb676;
   border-radius: 2px;
-}
+} */
 
 </style>
