@@ -1,6 +1,5 @@
 <template>
   <div>
-    页面布局
     <router-view></router-view>
     <van-tabbar route>
       <van-tabbar-item to="/ ">
