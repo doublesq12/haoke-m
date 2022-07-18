@@ -5,7 +5,11 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
+    path: '/favorate',
+    component: () => import('@/views/My/favorate.vue')
+  },
+  {
+    path: '/',
     component: () => import('@/views/Login')
   },
   {

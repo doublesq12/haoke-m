@@ -15,3 +15,8 @@ export const getUserInfo = () => {
     // }
   })
 }
+export const getFavoriteList = () => {
+  return request({
+    url: '/user/favorites'
+  })
+}

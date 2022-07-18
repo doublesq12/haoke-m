@@ -46,7 +46,7 @@
     </header>
     <main>
       <van-grid :column-num="3">
-        <van-grid-item text="我的收藏">
+        <van-grid-item text="我的收藏" to="/favorate">
           <template #icon>
             <van-icon name="star-o" />
           </template>
