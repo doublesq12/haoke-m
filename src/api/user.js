@@ -20,3 +20,9 @@ export const getFavoriteList = () => {
     url: '/user/favorites'
   })
 }
+// user——查看已发布房源列表
+export const getPublishedList = () => {
+  return request({
+    url: '/user/houses'
+  })
+}

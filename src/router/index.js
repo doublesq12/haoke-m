@@ -5,6 +5,14 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/component',
+    component: () => import('@/views/My/component.vue')
+  },
+  {
+    path: '/rent',
+    component: () => import('@/views/My/rent.vue')
+  },
+  {
     path: '/favorate',
     component: () => import('@/views/My/favorate.vue')
   },

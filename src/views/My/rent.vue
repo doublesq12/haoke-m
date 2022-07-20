@@ -1,7 +1,6 @@
 <template>
-<!-- 我的收藏点进去收藏列表页面 -->
-  <div class="favorate">
-    <van-nav-bar title="收藏列表" left-arrow @click-left="backToMyPage" />
+  <div class="rent">
+    <van-nav-bar title="房屋管理" left-arrow @click-left="backToMyPage" />
     <!-- <van-row type="flex" v-for="(item, index) in favoriteList" :key="index">
       <van-image width="100" height="100" :src="baseURL + item.houseImg" />
       <div class="text">
@@ -11,17 +10,17 @@
         <p class="pfour">{{ item.price }}元/月</p>
       </div>
     </van-row> -->
-    <cell :list="favoriteList"></cell>
+    <cell :list="publishedList"></cell>
   </div>
 </template>
 
 <script>
 import cell from '@/components/cell.vue'
-import { getFavoriteList } from '@/api'
+import { getPublishedList } from '@/api'
 export default {
   data() {
     return {
-      favoriteList: []
+      publishedList: []
     }
   },
   components: {
@@ -31,16 +30,20 @@ export default {
     backToMyPage() {
       this.$router.back()
     },
-    async getFavoriteList() {
-      const { data } = await getFavoriteList()
-      console.log(data)
-      this.favoriteList = data.body
-      console.log(this.favoriteList)
-      // console.log(data.body)
+    async getPublishedList() {
+      try {
+        const { data } = await getPublishedList()
+        // console.log(data)
+        this.publishedList = data.body
+        // console.log(this.publishedList)
+        // console.log(data.body)
+      } catch (error) {
+        console.log('获取列表失败')
+      }
     }
   },
   created() {
-    this.getFavoriteList()
+    this.getPublishedList()
   }
 }
 </script>
